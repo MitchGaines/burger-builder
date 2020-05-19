@@ -2,7 +2,7 @@
     width: 100%;
     margin: auto;
     height: 250px;
-    overflow: scroll;
+    overflow: visible;
     /* -ms-overflow-style: none; */
     text-align: center;
     font-weight: bold;

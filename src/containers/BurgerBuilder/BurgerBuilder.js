@@ -68,10 +68,17 @@ function BurgerBuilder() {
         updateIsCheckingOut(false);
     };
 
+    const checkoutContinueHandler = () => {
+        alert('Continuing');
+    };
+
     return (
         <Aux>
             <Modal show={is_checking_out} modalClosed={checkoutCancelHandler}>
-                <OrderSummary ingredients={ingredients}/>
+                <OrderSummary ingredients={ingredients}
+                              checkoutCancelled={checkoutCancelHandler}
+                              checkoutContinued={checkoutContinueHandler}
+                              price={price} />
             </Modal>
             <Burger ingredients={ingredients}/>
             <BuildControls ingredientAdded={addIngredientHandler}
